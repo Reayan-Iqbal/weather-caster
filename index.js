@@ -24,6 +24,6 @@ app.get("/api/weather", async (req, res) => {
 	}
 });
 
-app.listen(3000, () => {
+app.listen(process.env.port || 3000, () => {
 	console.log("Listening on Port 3000");
 });
