@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 4000;
 const cors = require("cors");
 const geoRouter = require("./routes/geoRouter");
 const axios = require("axios");
@@ -24,6 +25,6 @@ app.get("/api/weather", async (req, res) => {
 	}
 });
 
-app.listen(process.env.port || 3000, () => {
-	console.log("Listening on Port 3000");
+app.listen(port, () => {
+	console.log("Listening on Port", port);
 });
